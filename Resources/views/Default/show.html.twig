@@ -90,7 +90,11 @@
             {% for label, value in data %}
                 <tr>
                     <th>{{ label }}</th>
-                    <td>{{ value }}</td>
+                    {% if value is iterable %}
+                        <td><span style="display: none" class="json">{{ value | json_encode }}</span></td>
+                    {% else %}
+                        <td>{{ value }}</td>
+                    {% endif %}
                 </tr>
             {% endfor %}
         </tbody>

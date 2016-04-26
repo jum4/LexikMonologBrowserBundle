@@ -8,8 +8,6 @@ class NormalizerFormatter extends BaseFormatter
 {
     protected function normalize($data)
     {
-        $data = parent::normalize($data);
-
         if (is_array($data)) {
             foreach ($data as $key => &$value) {
                 if (is_array($value)) {
@@ -17,6 +15,8 @@ class NormalizerFormatter extends BaseFormatter
                 }
             }
         }
+
+        $data = parent::normalize($data);
 
         return $data;
     }
