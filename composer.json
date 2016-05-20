@@ -22,8 +22,8 @@
         "knplabs/knp-paginator-bundle": ">=2.3"
     },
     "require-dev": {
-        "monolog/monolog": "~1.2",
-        "doctrine/dbal": "~2.4"
+        "monolog/monolog": "~1.8",
+        "doctrine/dbal": "~2.5"
     },
     "autoload": {
         "psr-4": { "Lexik\\Bundle\\MonologBrowserBundle\\": "" }
