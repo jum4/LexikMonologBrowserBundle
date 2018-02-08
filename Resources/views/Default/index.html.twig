@@ -59,7 +59,7 @@
                     <td>{{ utils.render_count_badge(log.count) }}</td>
                     <td>
                         <a href="{{ path('lexik_monolog_browser_show', { 'id': log.id }) }}">
-                            {{ log.message }}
+                            {{ log.message | slice(0, 150)}}
                         </a>
                     </td>
                     <td>
