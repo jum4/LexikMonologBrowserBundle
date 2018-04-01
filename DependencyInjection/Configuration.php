@@ -39,7 +39,6 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('table_name')->defaultValue('monolog_entries')->end()
                         ->scalarNode('connection_name')->end()
                         ->arrayNode('connection')
-                            ->cannotBeEmpty()
                             ->children()
                                 ->scalarNode('driver')->end()
                                 ->scalarNode('driverClass')->end()
