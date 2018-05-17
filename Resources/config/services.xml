@@ -15,7 +15,7 @@
             <argument>%lexik_monolog_browser.doctrine.table_name%</argument>
         </service>
 
-        <service id="lexik_monolog_browser.model.log_repository" class="%lexik_monolog_browser.model.log_repository.class%">
+        <service id="lexik_monolog_browser.model.log_repository" class="%lexik_monolog_browser.model.log_repository.class%" public="true">
             <argument type="service" id="lexik_monolog_browser.doctrine_dbal.connection" />
             <argument>%lexik_monolog_browser.doctrine.table_name%</argument>
         </service>
